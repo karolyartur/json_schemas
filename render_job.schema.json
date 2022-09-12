@@ -1,0 +1,39 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "TODO:TODO/json_schemas/render_job.schema.json",
+"title": "Render job",
+"description": "A render job for the renderer",
+"type": "object",
+"properties": {
+    "jobId": {
+        "description": "The unique identifier for the job",
+        "type": "integer"
+    },
+    "timestamp": {
+        "description": "A UNIX timestamp of when the job was submitted",
+        "type": "number"
+    },
+    "scenePath": {
+        "description": "Path to blend file containing the scene (in Minio storage) Required format: bucket/path/to/blend/file",
+        "type": "string"
+    },
+    "startFrame": {
+        "description": "The number of the frame from where the rendering starts",
+        "type": "integer",
+        "minimum": 0,
+        "default": 0
+    },
+    "numFrames": {
+        "description": "The number of frames to render",
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+    },
+    "useGPU": {
+        "description": "Boolean value signaling whether to use GPU for rendering or not",
+        "type": "boolean",
+        "default": false
+    }
+},
+"required": ["jobId","timestamp","scenePath"]
+}
