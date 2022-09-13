@@ -1,6 +1,6 @@
 {
 "$schema": "https://json-schema.org/draft/2020-12/schema",
-"$id": "TODO:TODO/json_schemas/render_job.schema.json",
+"$id": "render_job.schema.json",
 "title": "Render job",
 "description": "A render job for the renderer",
 "type": "object",
