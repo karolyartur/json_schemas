@@ -17,11 +17,7 @@
     "elapsedTime": {
         "description": "The time the rendering process took, in seconds",
         "type": "number"
-    },
-    "outputLocation": {
-        "description": "Path to resulted rendered frames (in Minio storage) In the format: bucket/path/to/rendered/images",
-        "type": "string"
     }
 },
-"required": ["renderJob","timestamp","elapsedTime","outputLocation"]
+"required": ["renderJob","timestamp","elapsedTime"]
 }

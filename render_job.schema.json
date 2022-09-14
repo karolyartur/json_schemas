@@ -33,7 +33,11 @@
         "description": "Boolean value signaling whether to use GPU for rendering or not",
         "type": "boolean",
         "default": false
+    },
+    "outputLocation": {
+        "description": "Path to resulted rendered frames (in Minio storage) In the format: bucket/path/to/rendered/images",
+        "type": "string"
     }
 },
-"required": ["jobId","timestamp","scenePath"]
+"required": ["jobId","timestamp","scenePath","outputLocation"]
 }
