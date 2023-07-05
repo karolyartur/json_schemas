@@ -1,0 +1,46 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "service_info.schema.json",
+"title": "Service information",
+"description": "Detailed information about a service",
+"type": "object",
+"properties": {
+    "serviceName": {
+        "description": "Name of the service",
+        "type": "string"
+    },
+    "serviceDescription": {
+        "description": "Detailed information about what the service is used for",
+        "type": "string"
+    },
+    "inputTopics": {
+        "description": "List of topics that the service subscribes to",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "topicName": {
+                    "description": "topic name",
+                    "type": "string"
+                },
+                "schema": {}
+            }
+        }
+    },
+    "outputTopics": {
+        "description": "list of topics that service produces to",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "topicName": {
+                    "description": "topic name",
+                "type": "string"
+                },
+                "schema": {}
+            }
+        }
+    }
+},
+"required": ["serviceName", "inputTopics", "outputTopics"]
+}
