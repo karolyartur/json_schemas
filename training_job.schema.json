@@ -18,21 +18,6 @@
         "type": "string",
         "default": "model"
     },
-    "epochs":{
-        "description": "Number of epochs to train for",
-        "type": "integer",
-        "default": 1
-    },
-    "initWeights":{
-        "description": "Initial weights to use. Accepted values are 'coco', 'imagenet' and 'last'",
-        "type": "string",
-        "default": "coco"
-    },
-    "layers":{
-        "description": "Regex telling which layers' weights to modify during training (See Mask-RCNN implementation for further detail)",
-        "type": "string",
-        "default": "heads"
-    },
     "trainDataPath": {
         "description": "Path to folder containing the training data (in Minio storage) Required format: bucket/path/to/training/folder",
         "type": "string"
@@ -44,11 +29,6 @@
     "configFilePath": {
         "description": "Path to configuration file for the DL model (in Minio storage) Required format: bucket/path/to/config/file",
         "type": "string"
-    },
-    "classInfoFilePath": {
-        "description": "Path to yaml file containing the class info (in Minio storage) Required format: bucket/path/to/class/info/file",
-        "type": "string",
-        "default": ""
     },
     "outputLocation": {
         "description": "Path to resulted output files (in Minio storage) In the format: bucket/path/to/output/files",
