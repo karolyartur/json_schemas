@@ -33,6 +33,11 @@
     "outputLocation": {
         "description": "Path to resulted output files (in Minio storage) In the format: bucket/path/to/output/files",
         "type": "string"
+    },
+    "preprocessDataset": {
+        "description": "Boolean value signaling whether to preprocess the dataset or not",
+        "type": "boolean",
+        "default": true
     }
 },
 "required": ["jobId","timestamp","trainDataPath","validDataPath","configFilePath","outputLocation"]
