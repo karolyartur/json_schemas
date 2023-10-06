@@ -1,0 +1,53 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "inference_output.schema.json",
+"title": "Inference output",
+"description": "Output from the Mask-RCNN predictor",
+"type": "object",
+"properties": {
+    "inferenceJob": {
+        "description": "The incoming InferenceJob for this output",
+        "type": "object",
+        "$ref": "inference_job.schema.json"
+    },
+    "timestamp": {
+        "description": "A UNIX timestamp of when the job was submitted",
+        "type": "number"
+    },
+    "elapsedTime": {
+        "description": "The time the inference process took, in seconds",
+        "type": "number"
+    },
+    "predictions": {
+        "description": "The bounding box results",
+        "type": "object",
+        "properties": {
+            "boxes": {
+                "description": "Bounding boxes in [x_min, y_min, x_max, y_max] format",
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            },
+            "labels": {
+                "description": "Object labels associated with each bounding box",
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                }
+            },
+            "scores": {
+                "description": "Confidence score for each bounding box",
+                "type": "array",
+                "items": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+},
+"required": ["inferenceJob","timestamp","elapsedTime","predictions"]
+}

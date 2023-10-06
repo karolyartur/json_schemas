@@ -15,7 +15,7 @@
         "type": "number"
     },
     "elapsedTime": {
-        "description": "The time the rendering process took, in seconds",
+        "description": "The time the training process took, in seconds",
         "type": "number"
     }
 },
