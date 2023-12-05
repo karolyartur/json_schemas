@@ -1,0 +1,55 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "mushroom_tracking_job.schema.json",
+"title": "Mushroom tracking job",
+"description": "A job for tracking mushrooms",
+"type": "object",
+"properties": {
+    "jobId": {
+        "description": "The unique identifier for the job",
+        "type": "integer"
+    },
+    "timestamp": {
+        "description": "A UNIX timestamp of when the job was submitted",
+        "type": "number"
+    },
+    "IoUThrd": {
+        "description": "Threshold level for IoU (intersection over union) at which two detection can be matched",
+        "type": "number",
+        "default": 0.5
+    },
+    "maxCandidateAge": {
+        "description": "Number of consecutive matches after which a candidate instance becomes a tracked instance",
+        "type": "integer",
+        "default": 2
+    },
+    "maxLostAge": {
+        "description": "Number of consecutive non-matches after which instance is considered picked",
+        "type": "integer",
+        "default": 4
+    },
+    "RoI": {
+        "description": "Region of Interest (described by the corners in pixel units as [x_min,y_min,x_max,y_max])",
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+            "type": "integer"
+        }
+    },
+    "weightFileName": {
+        "description": "Name of the file containing the weights of the network whose detections will be used",
+        "type": "string",
+        "default": "mushroom_0000_maskrcnn_weights_2023_08_01_0038"
+    },
+    "dateStart": {
+        "description": "Start date (included) as a string in the format: YYYY_MM_DD_HHMM",
+        "type": "string"
+    },
+    "dateEnd": {
+        "description": "End date (not included) as a string in the format: YYYY_MM_DD_HHMM",
+        "type": "string"
+    }
+},
+"required": ["jobId","timestamp","dateStart","dateEnd"]
+}
