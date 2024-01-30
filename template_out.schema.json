@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "template_out.schema.json",
+    "title": "Template output",
+    "description": "An output message from the template service",
+    "type": "object",
+    "properties": {
+        "incoming_message": {
+            "description": "The incoming message for this output",
+            "type": "object",
+            "$ref": "template_in.schema.json"
+        },
+        "elapsed_time": {
+            "description": "The time the process took, in seconds",
+            "type": "number"
+        },
+        "action": {
+            "description": "The action taken by the service",
+            "type": "string"
+        }
+    },
+    "required": ["incoming_message", "elapsed_time", "action"]
+    }

@@ -1,0 +1,14 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "template_in.schema.json",
+"title": "Template input",
+"description": "An input message for the template service",
+"type": "object",
+"properties": {
+    "num": {
+        "description": "A number that dictates what the template service does (0: print internal value using python, 1: echo it in the command line, 2: Upload it to MinIO)",
+        "type": "integer"
+    }
+},
+"required": ["num"]
+}
