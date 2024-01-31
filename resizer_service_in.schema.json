@@ -1,0 +1,26 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"$id": "resizer_service_in.schema.json",
+"title": "resize input job",
+"description": "An inference for the DL predictor",
+"type": "object",
+"properties": {
+    "jobId": {
+        "description": "The unique identifier for the job",
+        "type": "integer"
+    },
+    "timestamp": {
+        "description": "A UNIX timestamp of when the job was submitted",
+        "type": "number"
+    },
+    "targetpicture": {
+        "description": "Path to file containing the weights of the DL model (in Minio storage) Required format: bucket/path/to/weights/file",
+        "type": "string"
+    },
+    "picture": {
+        "description": "Path to image (in Minio storage) that the DL model should process. In the format: bucket/path/to/output/files",
+        "type": "string"
+    }
+},
+"required": ["jobId","timestamp","targetpicture","picture"]
+}
