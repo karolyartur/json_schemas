@@ -18,6 +18,16 @@
         "description": "The time the tracking process took, in seconds",
         "type": "number"
     },
+    "maxMsg": {
+        "description": "Number of all messages that will be sent",
+        "type": "number",
+        "default": 0
+    },
+    "currMsg": {
+        "description": "Number of current message",
+        "type": "number",
+        "default": 0
+    },
     "trackingResult": {
         "description": "The tracking results",
         "type": "object"
