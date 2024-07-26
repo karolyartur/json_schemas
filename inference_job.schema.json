@@ -24,7 +24,7 @@
     "maxDets": {
         "description": "Integer value specifying the maximum number of detections per image",
         "type": "integer",
-        "default": 100
+        "default": 1000
     },
     "outputLocation": {
         "description": "Path to resulted output files (in Minio storage) In the format: bucket/path/to/output/files",
