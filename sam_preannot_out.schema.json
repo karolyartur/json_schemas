@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "sam_preannot_out.schema.json",
+    "title": "SAM Pre-annotation output",
+    "description": "Output message of the SAM pre-annotator",
+    "type": "object",
+    "properties": {
+        "incomingMessage": {
+            "description": "The incoming RenderJob for this output",
+            "type": "object",
+            "$ref": "render_job.schema.json"
+        },
+        "timeStamp": {
+            "description": "A UNIX timestamp of when the job was submitted",
+            "type": "number"
+        },
+        "elapsedTime": {
+            "description": "The time the rendering process took, in seconds",
+            "type": "number"
+        }
+    },
+    "required": ["renderJob","timestamp","elapsedTime"]
+}

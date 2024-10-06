@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "sam_preannot_in.schema.json",
+    "title": "SAM pre-annotation",
+    "description": "SAM pre-annotation for Label Studio",
+    "type": "object",
+    "properties": {
+        "jobId": {
+            "description": "The unique identifier for the job",
+            "type": "integer"
+        },
+        "timestamp": {
+            "description": "A UNIX timestamp of when the job was submitted",
+            "type": "number"
+        },
+        "imagePath": {
+            "description": "Path to image (in Minio storage) that the DL model should process. In the format: bucket/path/to/output/files",
+            "type": "string"
+        },
+        "outputPath": {
+            "description": "Path to resulted output files (in Minio storage) In the format: bucket/path/to/output/files",
+            "type": "string"
+        }
+    },
+    "required": ["jobId","timestamp","imagePath","outputPath"]
+}
