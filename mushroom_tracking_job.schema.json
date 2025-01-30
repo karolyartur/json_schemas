@@ -37,6 +37,11 @@
             "type": "integer"
         }
     },
+    "daqName": {
+        "description": "Name of the data acquisition unit, used for selecting DB",
+        "type": "string",
+        "default": "fungidaq1_2024"
+    },
     "weightFileName": {
         "description": "Name of the file containing the weights of the network whose detections will be used",
         "type": "string",
