@@ -34,6 +34,10 @@
         "description": "Boolean flag signaling whether to store inference results (bounding boxes) in MongoDB",
         "type": "boolean",
         "default": false
+    },
+    "daqName": {
+        "description": "Name of the DAQ (including year if any)",
+        "type": "string"
     }
 },
 "required": ["jobId","timestamp","modelWeightsFilePath","imagePath","outputLocation"]
